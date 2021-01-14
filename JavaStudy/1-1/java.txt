@@ -1,0 +1,14 @@
+簡単なJavaプログラミング
+
+public class Example {・・・・・Exampleクラスを定義
+  
+  public static void main(String [] arr) {・・・String型のarr配列のmainメソッド
+    System.out.println("hello world");・・・・"hello world"と処理の実行を行う
+  }
+}
+
+①クラスの定義
+②メソッドを定義
+③処理の実行
+
+コンパイル・・・人間語を機械語に変化すること

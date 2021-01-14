@@ -1,0 +1,32 @@
+制御文（条件分岐）・・・・プログラムを制御する文
+
+概念を知る
+「分岐」、「繰り返し」」で分かれる
+
+「分岐」・・・・if文、swith文を使う構文
+「繰り返し」・・for文,while文,do-while文を使う構文
+
+ex)
+String country = "AMERICA";
+  if (country equals("AMERICA")) {
+    System.out.println("アメリカ合衆国");
+  } elseif (country equals("Japan")) {
+    System.out.println("日本");
+  } else {
+    System.out.println("その他");
+  }
+
+int kubun = 2・・・int型のkubun配列に初期値として２を代入
+switch (kubun) {
+  case 1;・・・選択肢１・・・この選択肢を記述して分岐させる
+    System.out.println("aiueo")
+  break;・・・・処理中のcaseを終了させる
+
+  case 2;
+    System.out.println("kakikukeko")
+  break;
+  /
+  /
+  /
+
+}
