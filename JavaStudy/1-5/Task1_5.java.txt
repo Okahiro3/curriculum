@@ -1,0 +1,91 @@
+制御文（ループ文）
+概念・・・ループの主な機能は指定した回数分処理する、また特定の条件の処理を行う
+
+繰り返しの制御 for文
+int[] arr = {5, 8, 2, 6}; 
+
+// 配列arrの中身を全て表示する 
+for (int i = 0; i < arr.length; i++) { 
+　　System.out.println("arr[" + i + "] … " + arr[i]); 
+}
+
+arr.length・・・配列の要素数を数える属性（プロパティ）
+
+int i = 1; ・・・int型のi配列に初期値として１を代入
+
+//1から10までの数字を出力 
+while (i <= 10){ ・・・iが10以上であるならば
+  System.out.println( i ); ・・・iは出力する
+  i++; ・・・その時iは１づつ増やす
+}
+
+public static void main(String[] args)はJavaを実行するのに、必須のメソッドです。
+
+public・・・どこからでも参照可能
+static・・・インスタンスしなくても外部から使用可能
+void・・・・戻り値なし
+main・・・・メソッド名
+String・・・引数をString型の配列で受け取る
+args・・・・引数名
+
+scannerクラス・・・ユーザーからの数値の入力するために、javaの標準クラスライブラリとして提供される
+
+import java.util.Scanner; ・・・import宣言を行なっている
+
+public class WhileSample { 
+  public static void main(String[] args) { 
+    int inputNum; // ユーザ入力値 
+    int sum = 0; // 合計値 
+
+    // ユーザ入力読み込みオブジェクトを生成 
+    Scanner scanner = new Scanner(System.in); new演算子を使ってインスタンスの生成する  クラスをもとに実際に作ったもの
+
+    // 初回の数値入力 
+    System.out.print("数値入力（-1で終了）："); 
+    inputNum = scanner.nextInt(); 
+
+    // ユーザから「-1」が入力されるまで、入力された数値をsum変数に加算 
+    while (inputNum != -1) { 
+      // 入力値をsumに加算 
+      sum += inputNum; 
+
+      // ２回目以降の数値入力 
+      System.out.print("数値入力（-1で終了）："); 
+      inputNum = scanner.nextInt(); 
+    } 
+
+    // 合計値を表示 
+    System.out.println("入力された数値の合計は " + sum + " です。"); 
+  } 
+}
+
+import java.util.Scanner; 
+
+public class DoWhileSample { 
+  public static void main(String[] args) { 
+    int inputNum; // ユーザ入力値 
+    int sum = 0; // 合計値 
+
+    // ユーザ入力読み込みオブジェクトを生成 
+    Scanner scanner = new Scanner(System.in);  Scannerのインスタンスを生成し、System.inでキーボードで入力されたのを表示する
+
+    // 初期値を入力 
+    System.out.print("初期値入力："); 
+    inputNum = scanner.nextInt(); 
+    System.out.println("初期値は " + inputNum + " です。\n"); 
+
+    // ユーザから「-1」が入力されるまで、入力された数値をsum変数に加算 
+    do { 
+      // 入力値をsumに加算 
+      sum += inputNum; 
+
+      // 加算値を入力 
+      System.out.print("加算値入力（-1で終了）："); 
+      inputNum = scanner.nextInt(); next 空白までの文字列を取得する
+
+    } while (inputNum != -1); 
+
+    // 合計値を表示 
+    System.out.println("入力された数値の合計は " + sum + " です。"); 
+  } 
+}
