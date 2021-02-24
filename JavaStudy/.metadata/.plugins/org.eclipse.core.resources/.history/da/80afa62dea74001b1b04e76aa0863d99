@@ -1,0 +1,10 @@
+package study;
+
+public class SumMain {
+
+    public static void main(String[] args) {
+        Sum sum = new Sum();
+        int sumValue = sum.plus(2, 3, 4);
+        System.out.println(sumValue);
+    }
+}
