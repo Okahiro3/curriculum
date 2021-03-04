@@ -1,0 +1,22 @@
+package check;
+
+public class Check {
+	
+	private static String firstName = "岡崎";
+	private static String lastName = "紘之";
+	
+    private static void printName(String firstName, String lastName) {
+    	
+    	System.out.println("printNameメソッド → " + firstName + lastName);
+		
+	}
+	public static void main(String[] args) {
+		
+		Check.printName(firstName, lastName);
+	}
+	
+
+	
+	
+
+}

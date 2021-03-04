@@ -1,0 +1,19 @@
+package study;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+
+public class Test {
+	
+	public static void main(String[] args) throws ParseException {
+		
+		SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy年m月d日h時m分s秒");
+		
+		Date date = new Date();
+		System.out.println(sdf1.format(date));
+//		出力
+	}
+
+}
