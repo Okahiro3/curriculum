@@ -1,7 +1,0 @@
-package study;
-
-public class GreetInJapanese extends Greet {
-	public void afternoon() {
-		super.afternoon();
-	}
-}
