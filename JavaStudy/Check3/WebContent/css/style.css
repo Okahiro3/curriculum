@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+table {
+	padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+div {
+	background-color: gray;
+}
+
+label {
+	display: inline-block;
+    padding: 10px;
+    color: white;
+}
+
