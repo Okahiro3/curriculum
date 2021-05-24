@@ -1,9 +1,0 @@
-@charset "UTF-8";
-
-header {
-	background-color: gray;
-}
-
-footer {
-	background-color: gray;
-}
