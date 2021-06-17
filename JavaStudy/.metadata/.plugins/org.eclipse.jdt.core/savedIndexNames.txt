@@ -13,7 +13,6 @@ INDEX VERSION 1.131+/Users/okazaki1546/Desktop/LetsEngineer/curriculum/JavaStudy
 4284809168.index
 26456276.index
 3703194086.index
-3597538908.index
 311043671.index
 4222055287.index
 2288242502.index
