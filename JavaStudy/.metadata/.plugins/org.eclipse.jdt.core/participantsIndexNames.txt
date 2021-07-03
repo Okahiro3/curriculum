@@ -3,3 +3,5 @@ INDEX VERSION 1.131
 /Check3/src
 /Users/okazaki1546/Desktop/LetsEngineer/curriculum/JavaStudy/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3040355110.index
 /JspTest/src
+/Users/okazaki1546/Desktop/LetsEngineer/curriculum/JavaStudy/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2436797943.index
+/Check4/src

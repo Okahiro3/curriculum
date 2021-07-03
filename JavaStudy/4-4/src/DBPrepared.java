@@ -29,7 +29,7 @@ public class DBPrepared {
     private static final String USER = "postgres";
     /** ・パスワード */
     // 問③ データベースのパスワードを定数にしなさい。
-    private static final String PASS = "Hiro3Oka31546";
+    private static final String PASS = "postgres";
 
     public static void main(String[] args) {
 
@@ -41,7 +41,7 @@ public class DBPrepared {
             Class.forName(POSTGRES_DRIVER);
             // 問④ 問①〜③の定数を使ってデータベースと接続しなさい。
             connection = DriverManager.getConnection(
-            "jdbc:postgresql://localhost:5432/lesson_db", "postgres", "Hiro3Oka31546");
+            "jdbc:postgresql://localhost:5432/lesson_db", "postgres", "postgres");
             statement = connection.createStatement();
 
             String SQL = "SELECT * FROM TB_SHOHIN WHERE SHOHIN_ID = ? OR SHOHIN_ID = ? ";
