@@ -9,5 +9,9 @@
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="com.sun.org.apache.xalan.internal.templates.Constants"/>
     <fullyQualifiedTypeName name="com.sun.org.apache.xalan.internal.xsltc.compiler.Constants"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="skillcheck.dao.EmployeeDao.ExecuteCase"/>
+    <fullyQualifiedTypeName name="skillcheck.logger.Logger"/>
+    <fullyQualifiedTypeName name="skillcheck.service.EmployeeManagementService"/>
 </qualifiedTypeNameHistroy>

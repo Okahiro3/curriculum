@@ -17,7 +17,7 @@
 <tr>
   <th>name</th>
   <td><input type="text"></td>
-</tr>
+ </tr>
 <tr>
   <th>id</th>
   <td><input type="text"></td>

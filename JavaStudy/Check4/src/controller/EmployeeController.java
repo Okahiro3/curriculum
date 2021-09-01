@@ -23,6 +23,7 @@ public class EmployeeController extends HttpServlet {
   // 問① index.htmlから送信されたIDとPassWordの値を取得できるように修正しましょう。
  String id = request.getParameter("id");
  String password = request.getParameter("password");
+ /*ユーザーからの入力情報をパラメーターとして受け取る*/
 
  /*
  * IDとPassWordと元に、社員情報を検索する関数の呼び出し、結果をJSPに渡す処理
@@ -32,14 +33,22 @@ public class EmployeeController extends HttpServlet {
  EmployeeService employeeService = new EmployeeService();
   // 問③ EmployeeBeanに、EmployeeServiceよりsearch関数を呼び出し、返り値を格納する。
  EmployeeBean employee = employeeService.search(id, password);
+ /*社員情報を問い合わせするためにEmployeeServiceのsearchメソッドを実行する
+  * 24,25行目で処理されたパラメータの情報を元に*/
   // 問④ nullの部分に適切な引数をセットする。
  request.setAttribute("EmployeeBean", employee);
+ /*jspに返す準備
+  * キー：EmployeeBean
+  * 値：employee（値格納済み）*/
 
  } catch (Exception e) {
  e.printStackTrace();
- } finally {
+ } finally {/*サーブレット・・Java上でサーバー実行するためのプログラム*/
  ServletContext context = this.getServletContext();
+ /*Java上でサーバーを実行させる*/
  RequestDispatcher dispatcher = context.getRequestDispatcher("/index.jsp");
+ /*渡したいjspを指定*/
+ /*サーブレットからJSPを表示するためのインターフェイス。*/
  dispatcher.forward(request, response);
  }
  }

@@ -52,10 +52,14 @@ public class EmployeeService {
  Class.forName(POSTGRES_DRIVER);
  connection = DriverManager.getConnection(JDBC_CONNECTION, USER, PASS);
  statement = connection.createStatement();
+ /*静的SQL文を実行し、作成された結果を返すために使用されるオブジェクトです。*/
 
   // 処理が流れた時間をフォーマットに合わせて生成
- Calendar cal = Calendar.getInstance();
+ Calendar cal = Calendar.getInstance(); 
+ /*Calendarクラスの中のgetInstanceメソッドを使って日時を取得する。cal変数に格納する*/
  SimpleDateFormat sdFormat = new SimpleDateFormat(TIME_FORMAT);
+ /*TIME_FORMATに従って表示する
+  * 取得した時間を国、地域によって設定し表示させる*/
 
   // PreparedStatementで使用するため、String型に変換
  String login_time = sdFormat.format(cal.getTime());
@@ -66,11 +70,16 @@ public class EmployeeService {
 
   // preparedStatementに実行したいSQLを格納
  preparedStatement = connection.prepareStatement(SQL_UPDATE);
+ /*PreparedStatementインタフェース*/
   // 問④ preparedStatementを使って、一番目のindexに今の時間をセットしてください。2番目のindexにIDをセットしてください。
  preparedStatement.setString(1, login_time);
+ /*第１引数の意味は１番目の？に対応するもの（login_timeをさす）、第１引数の意味は値を示す
+  * 指定されたパラメータを指定されたJavaのString値に設定します。*/
  preparedStatement.setString(2, id);
   // 問⑤ UPDATEを実行する文を記述
  preparedStatement.executeUpdate();
+ /*PreparedStatementインタフェースのexecuteUpdateメソッドを使って指定されたSQLを実行し，更新行数を返します。
+*/
  /*
  * UPDATEが成功したものを即座に表示
  * 任意のユーザーを検索できるように、プリペアドステートメントを記述。
@@ -81,10 +90,12 @@ public class EmployeeService {
  preparedStatement.setString(2, password);
   // SQLを実行。実行した結果をresultSetに格納。
  resultSet = preparedStatement.executeQuery();
+ /*引数で指定されたSQLをデータベースで実行し、resultSetに返す*/
 
  while (resultSet.next()) {
   // 問⑦ tmpName,tmpComment,tmpLoginTimeに適当な値を入れてください。
  String tmpName = resultSet.getString("name");
+ /*ResultSetオブジェクトの現在行の列の値を，Javaプログラミング言語のStringで取得*/
  String tmpComment = resultSet.getString("comment");
  String tmpLoginTime = resultSet.getString("login_time");
 
@@ -93,6 +104,7 @@ public class EmployeeService {
  employeeDate.setName(tmpName);
  employeeDate.setComment(tmpComment);
  employeeDate.setLogin_Time(tmpLoginTime);
+ /*SQL値をEmployeeControllerに返却する*/
  }
 
   // forName()で例外発生
@@ -121,5 +133,6 @@ public class EmployeeService {
  }
  }
  return employeeDate;
+ /*EmployeeBean employeeにEmployeeControllerのserachメソッドの返り値を格納する*/
  }
 }

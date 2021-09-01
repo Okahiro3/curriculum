@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<runner version="1.0.0">
+    <category expanded="true" name="カテゴリーなし">
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Check"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="DBAccess"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="DBPrepared"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="DBSelect"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="DBUpdate"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="ExException"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Example5_1"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Example5_2"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="GreetMain"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="KirbyMain"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="MVC_Task"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (1)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (2)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (3)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Main (4)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="MonthTest"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Study"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Study (1)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Study (2)"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="SumMain"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Test"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="ThrowsExceptionSample"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Tomcat.1"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="localhost の Tomcat8 (Java8)"/>
+    </category>
+</runner>
