@@ -73,7 +73,7 @@
 <!-- Tips2: 適用するcssファイルのパスの書き方に注意 -->
 <link rel="stylesheet" type="text/css" href="./css/login.css">
 <link rel="stylesheet" type="text/css" href="./css/common.css">
-<script type="text/javascript" src="js/common.js"/></script>
+<script type="text/javascript" src="js/common.js"></script>
 <title>ログイン</title>
 </head>
 <body>
@@ -86,7 +86,7 @@
             <!-- 2. class属性と、適用するスタイルの記述-->
             <!-- Tips: common.cssより赤色の文字色を定義しているスタイルを確認 -->
             <!-- [ここへ記述] -->
-            <label for="error-label">該当する社員情報がありません</label>
+            <label class="error-label"><%= message %></label>
             <br>
         <% } %>
         <!-- FIXME Step-1-3: actionに送信先URIを記述しなさい。 -->

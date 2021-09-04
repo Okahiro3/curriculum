@@ -40,7 +40,8 @@ public abstract class BaseServlet extends HttpServlet {
     protected static final String CONST_DESTINATION_LOGIN_JSP = "/MVC_Task/login.jsp";
     // FIXME Step-3-2: 実行結果表示用のjspファイルのパスを記述しなさい。
     protected static final String CONST_DESTINATION_RESULT_JSP = "/employeeResult.jsp";
-
+//    エラー発生箇所→解決方法
+//    CONST_DESTINATION_RESULT_JSPの中に”/MVC_Task”を入力してしまった→削除
     /* フィールド変数の定義 */
     /** フォーワード先 */
     protected String destinationTarget;
@@ -152,7 +153,12 @@ public abstract class BaseServlet extends HttpServlet {
             // Tips3: 第二引数の渡し方に注意すること
             // ←ここへ記述
         	EmployeeBean employeeBean = new EmployeeBean(reqEmpId);
+        	
+//        	先にEmployeeBeanをインスタンス化する　reqEmpIdを必ず代入する　EmployeeBean()コンストラクタの引数にempIdが指定されている
+//        	login.jspからempIdとpasswordをもらうgetParameterの部分→そこからEmpIdだけを持ってくる（reqEmpId）passは不必要　仕様
+        	
         	responseBean = ems.getEmployeeData(ExecuteCase.FIND_BY_EMPID, employeeBean);
+        	
             // 最初の1件を取得
             resEmployeeBean = responseBean.getEmplyeeBeanList().stream().findFirst().orElse(null);
 

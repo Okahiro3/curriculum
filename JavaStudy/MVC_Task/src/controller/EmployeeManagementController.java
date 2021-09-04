@@ -167,7 +167,7 @@ public final class EmployeeManagementController extends BaseServlet {
             // Tips1: リクエストへレスポンス情報をセット
             // Tips2: キー名は「CONST_REQUST_KEY_FOR_RESPONSE_BEAN」使用
             // [ここへ記述]
-            request.setAttribute("CONST_REQUST_KEY_FOR_RESPONSE_BEAN", responseBean);
+            request.setAttribute(CONST_REQUST_KEY_FOR_RESPONSE_BEAN, responseBean);
             Logger.log(new Throwable(), "遷移先 = " + this.destinationTarget);
 
             // ログイン成功、かつ、セッションが存在、かつ、フォワード先が設定済みの場合のみフォワード

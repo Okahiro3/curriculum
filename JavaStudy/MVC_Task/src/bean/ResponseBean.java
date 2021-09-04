@@ -8,7 +8,7 @@ import java.util.List;
  * @author y.sato
  * @since 2019/01/02
  */
-public class ResponseBean {
+public final class ResponseBean {
 
     /** ・メッセージ */
     private String _message;

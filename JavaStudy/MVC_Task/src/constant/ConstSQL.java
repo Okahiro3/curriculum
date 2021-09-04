@@ -29,7 +29,8 @@ public final class ConstSQL {
     public static final String SELECT_BY_DELETE_FLG_ZERO = " WHERE deleteFlg = '0' ORDER BY empId";
     /** 社員番号を条件とするクエリ: 完全一致 */
     public static final String SELECT_BY_EMPID = " WHERE empId = ? AND deleteFlg = '0'";
-
+//    エラー発生箇所→解決方法
+//    SELECT_BY_DELETE_FLG_ZEROとSELECT_BY_EMPIDにselect文を入力してしまったのでwhereより前のselect文を削除
     /** プリペアードステートメントで使用するクエリの条件値用プレースホルダー */
     public static final String CONST_PLACEHOLDER_FOR_BIND_PARAM = "?";
 }
