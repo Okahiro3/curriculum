@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 
 //問２－１ リポジトリを作成するアノテーションを記述
 @Repository
+//Spring MVCでデータ層のクラス（DAO等のDBアクセスを行うクラス）に付与する。
 public interface AccountRepository extends CrudRepository<Account, Long> {
     public Account findByUsername(String username);
     public List<Account> findAll();

@@ -15,4 +15,9 @@
     <fullyQualifiedTypeName name="skillcheck.logger.Logger"/>
     <fullyQualifiedTypeName name="skillcheck.service.EmployeeManagementService"/>
     <fullyQualifiedTypeName name="constant.ConstSQL"/>
+    <fullyQualifiedTypeName name="javax.persistence.EmbeddedId"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.ComponentScan"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
+    <fullyQualifiedTypeName name="com.example.security.springsecurity.account.AccountRepository"/>
+    <fullyQualifiedTypeName name="com.example.security.springsecurity.account.Account"/>
 </qualifiedTypeNameHistroy>

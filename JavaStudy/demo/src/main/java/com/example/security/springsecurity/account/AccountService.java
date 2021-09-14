@@ -57,6 +57,7 @@ public class AccountService implements UserDetailsService {
     public void registerManager(String username, String password, String mailAddress) {
         Account user = new Account(username, passwordEncoder.encode(password), mailAddress);
         user.setManager(true);
+      //userをもとに管理者情報の登録か更新を行う
         repository.save(user);
     }
 

@@ -21,11 +21,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 		http
 		.authorizeRequests()
+//		認証されたユーザーの認証情報を返却
 		.antMatchers("/login", "/login-error").permitAll()
+//		指定したパスパターンに一致するリソースを適用対象にする 全てのユーザーがアクセス可
 		.antMatchers("/**").hasRole("USER")
+//		ユーザー画面
 		.and()
 		.formLogin()
+//		フォーム認証の適用
 		.loginPage("/login").failureUrl("/login-error");
+//		ログインページへの遷移指定
 	}
 
 
@@ -34,7 +39,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth
 		.userDetailsService(userService)
+//		認証するユーザーを設定する ユーザー情報を検索する
 		.passwordEncoder(passwordEncoder());
+//		パスワードをハッシュ化
 
 		if (userService.findAllList().isEmpty()) {
 			userService.registerAdmin("admin", "secret", "admin@localhost");

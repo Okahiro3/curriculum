@@ -15,6 +15,7 @@ public class AuthController {
 
 	@Autowired
 	private AccountRepository repository;
+//	インスタンス変数
 
 	public List<Account> get() {
 		return (List<Account>) repository.findAll();
@@ -24,26 +25,32 @@ public class AuthController {
 	public String index() {
 		return "redirect:/top";
 	}
+//	topページに戻る
 
 	@GetMapping("/login")
 	public String login() {
 		return "login";
 	}
+//	Login成功時
 
 	@PostMapping("/login")
 	public String loginPost() {
 		return "redirect:/login-error";
 	}
+//	login失敗時
 
 	@GetMapping("/login-error")
 	public String loginError(Model model) {
 		model.addAttribute("loginError", true);
 		return "login";
 	}
+//	interface ModelのaddAttributeメソッドが実行される
+//	login画面に戻る
 
 	@RequestMapping("/top")
 	public String top() {
 		return "/top";
 	}
+//	top.htmlにいく
 
 }
