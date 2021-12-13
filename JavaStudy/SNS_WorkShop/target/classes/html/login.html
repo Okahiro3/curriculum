@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/follow.css">
+  <title>InstaGran</title>
+</head>
+<body class="bg-light">
+  <!-- ナビゲーションバー -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">InstaGran</a>
+      <div class="justify-content-end d-flex align-items-center col-4" id="user_icon">
+        <a href="/" class="col-3 mx-3 text-center text-dark">
+          <span>name</span>
+        </a>
+        <a href="/" class="nav_user_icon">
+          <img class="border rounded-circle" src="../img/rogo2.png" alt="">
+        </a>
+      </div>
+    </div>
+  </nav>
+  <!-- メインコンテンツ -->
+  <div class="container mt-5">
+    <p class="text-center fw-bold fs-2">ログイン</p>
+    <form action="">
+      <div class="row d-flex flex-column align-items-center mb-5">
+        <p class="mb-0 mt-2 fs-4 fw-bold text-left col-4" maxlength="45">E-mail</p>
+        <input type="email" name="email" class="col-4" placeholder="sample@example.co.jp">
+        <p class="mb-0 mt-2 fs-4 fw-bold text-left col-4">Password</p>
+        <input type="password" name="password" class="col-4" maxlength="20">
+      </div>
+      <div class="row d-flex flex-rows justify-content-evenly col-4 offset-4">
+        <a href="new_register.html" type="submit" class="col-4 btn btn-outline-info">新規登録</a>
+        <button type="submit" class="col-4 btn btn-outline-primary">Login</button>
+      </div>
+    </form>
+  </div>
+  <!-- フッター -->
+  <footer class="container-xl mt-5 text-center">
+    <p language="en" translate="no">y-i-group.inc</p>
+  </footer>
+</body>
+</html>

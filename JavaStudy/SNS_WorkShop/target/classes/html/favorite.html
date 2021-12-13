@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/follow.css">
+  <title>InstaGran</title>
+</head>
+<body>
+
+  <!-- ナビゲーションバー -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">InstaGran</a>
+      <div class="justify-content-end d-flex align-items-center col-4" id="user_icon">
+        <a href="/" class="col-3 mx-3 text-center text-dark">
+          <span>name</span>
+        </a>
+        <a href="/" class="nav_user_icon">
+          <img class="border rounded-circle" src="../img/rogo2.png" alt="">
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- メインコンテンツ -->
+  <div class="container-xl mt-5" id="main_sec">
+    <div class="fs-4 fw-bold text-center mb-5">
+      お気に入り一覧
+    </div>
+    <div class="container d-grid gap-3 py-3" id="following_container">
+      <div class="row d-flex justify-content-between align-items-center rounded-3 mx-2 border user_following">
+        <div class="icon ms-3">
+          <img class="border" src="../img/ロゴ.png" alt="">
+        </div>
+        <div class="col-8 text-start my-3">
+          <div class="container d-flex flex-column">
+            <div class="row fw-bold">
+              <p class="mb-0">ユーザネーム</p>
+              <p class="text-black-50">sample@example.com</p>
+            </div>
+            <div class="row">
+              <p>
+                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm text-center favorite_icon">
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+            <path fill="#E2264D" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+          </svg> -->
+          <svg class="likeButton clicked" width="150px" height="150px" viewBox="0 0 500 500">
+            <circle class="explosion" r="150" cx="250" cy="250"></circle>
+            <g class="particleLayer">
+              <circle fill="#8CE8C3" cx="130" cy="126.5" r="12.5"></circle>
+              <circle fill="#8CE8C3" cx="411" cy="313.5" r="12.5"></circle>
+              <circle fill="#91D2FA" cx="279" cy="86.5" r="12.5"></circle>
+              <circle fill="#91D2FA" cx="155" cy="390.5" r="12.5"></circle>
+              <circle fill="#CC8EF5" cx="89" cy="292.5" r="10.5"></circle>
+              <circle fill="#9BDFBA" cx="414" cy="282.5" r="10.5"></circle>
+              <circle fill="#9BDFBA" cx="115" cy="149.5" r="10.5"></circle>
+              <circle fill="#9FC7FA" cx="250" cy="80.5" r="10.5"></circle>
+              <circle fill="#9FC7FA" cx="78" cy="261.5" r="10.5"></circle>
+              <circle fill="#96D8E9" cx="182" cy="402.5" r="10.5"></circle>
+              <circle fill="#CC8EF5" cx="401.5" cy="166" r="13"></circle>
+              <circle fill="#DB92D0" cx="379" cy="141.5" r="10.5"></circle>
+              <circle fill="#DB92D0" cx="327" cy="397.5" r="10.5"></circle>
+              <circle fill="#DD99B8" cx="296" cy="392.5" r="10.5"></circle>
+            </g>
+            <path class="heart" d="M250,187.4c-31.8-47.8-95.5-19.8-95.5,32.2c0,35.2,31.8,60.3,55.7,79.2c24.9,19.7,31.8,23.9,39.8,31.8 c7.9-7.9,14.6-12.6,39.8-31.8c24.3-18.5,55.7-44.4,55.7-79.6C345.5,167.6,281.8,139.7,250,187.4z"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-between align-items-center rounded-3 mx-2 border user_following">
+        <div class="icon ms-3">
+          <img class="border" src="../img/ロゴ.png" alt="">
+        </div>
+        <div class="col-8 text-start my-3">
+          <div class="container d-flex flex-column">
+            <div class="row fw-bold">
+              <p class="mb-0">ユーザネーム</p>
+              <p class="text-black-50">sample@example.com</p>
+            </div>
+            <div class="row">
+              <p>
+                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm text-center favorite_icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+            <path fill="#E2264D" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+          </svg>
+          <!-- <svg class="likeButton clicked" width="150px" height="150px" viewBox="0 0 500 500">
+            <circle class="explosion" r="150" cx="250" cy="250"></circle>
+            <g class="particleLayer">
+              <circle fill="#8CE8C3" cx="130" cy="126.5" r="12.5"></circle>
+              <circle fill="#8CE8C3" cx="411" cy="313.5" r="12.5"></circle>
+              <circle fill="#91D2FA" cx="279" cy="86.5" r="12.5"></circle>
+              <circle fill="#91D2FA" cx="155" cy="390.5" r="12.5"></circle>
+              <circle fill="#CC8EF5" cx="89" cy="292.5" r="10.5"></circle>
+              <circle fill="#9BDFBA" cx="414" cy="282.5" r="10.5"></circle>
+              <circle fill="#9BDFBA" cx="115" cy="149.5" r="10.5"></circle>
+              <circle fill="#9FC7FA" cx="250" cy="80.5" r="10.5"></circle>
+              <circle fill="#9FC7FA" cx="78" cy="261.5" r="10.5"></circle>
+              <circle fill="#96D8E9" cx="182" cy="402.5" r="10.5"></circle>
+              <circle fill="#CC8EF5" cx="401.5" cy="166" r="13"></circle>
+              <circle fill="#DB92D0" cx="379" cy="141.5" r="10.5"></circle>
+              <circle fill="#DB92D0" cx="327" cy="397.5" r="10.5"></circle>
+              <circle fill="#DD99B8" cx="296" cy="392.5" r="10.5"></circle>
+            </g>
+            <path class="heart" d="M250,187.4c-31.8-47.8-95.5-19.8-95.5,32.2c0,35.2,31.8,60.3,55.7,79.2c24.9,19.7,31.8,23.9,39.8,31.8 c7.9-7.9,14.6-12.6,39.8-31.8c24.3-18.5,55.7-44.4,55.7-79.6C345.5,167.6,281.8,139.7,250,187.4z"></path>
+          </svg> -->
+        </div>
+      </div>
+      <div class="row d-flex justify-content-between align-items-center rounded-3 mx-2 border user_following">
+        <div class="icon ms-3">
+          <img class="border" src="../img/ロゴ.png" alt="">
+        </div>
+        <div class="col-8 text-start my-3">
+          <div class="container d-flex flex-column">
+            <div class="row fw-bold">
+              <p class="mb-0">ユーザネーム</p>
+              <p class="text-black-50">sample@example.com</p>
+            </div>
+            <div class="row">
+              <p>
+                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm text-center favorite_icon">
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+            <path fill="#E2264D" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+          </svg> -->
+          <svg class="likeButton clicked" width="150px" height="150px" viewBox="0 0 500 500">
+            <circle class="explosion" r="150" cx="250" cy="250"></circle>
+            <g class="particleLayer">
+              <circle fill="#8CE8C3" cx="130" cy="126.5" r="12.5"></circle>
+              <circle fill="#8CE8C3" cx="411" cy="313.5" r="12.5"></circle>
+              <circle fill="#91D2FA" cx="279" cy="86.5" r="12.5"></circle>
+              <circle fill="#91D2FA" cx="155" cy="390.5" r="12.5"></circle>
+              <circle fill="#CC8EF5" cx="89" cy="292.5" r="10.5"></circle>
+              <circle fill="#9BDFBA" cx="414" cy="282.5" r="10.5"></circle>
+              <circle fill="#9BDFBA" cx="115" cy="149.5" r="10.5"></circle>
+              <circle fill="#9FC7FA" cx="250" cy="80.5" r="10.5"></circle>
+              <circle fill="#9FC7FA" cx="78" cy="261.5" r="10.5"></circle>
+              <circle fill="#96D8E9" cx="182" cy="402.5" r="10.5"></circle>
+              <circle fill="#CC8EF5" cx="401.5" cy="166" r="13"></circle>
+              <circle fill="#DB92D0" cx="379" cy="141.5" r="10.5"></circle>
+              <circle fill="#DB92D0" cx="327" cy="397.5" r="10.5"></circle>
+              <circle fill="#DD99B8" cx="296" cy="392.5" r="10.5"></circle>
+            </g>
+            <path class="heart" d="M250,187.4c-31.8-47.8-95.5-19.8-95.5,32.2c0,35.2,31.8,60.3,55.7,79.2c24.9,19.7,31.8,23.9,39.8,31.8 c7.9-7.9,14.6-12.6,39.8-31.8c24.3-18.5,55.7-44.4,55.7-79.6C345.5,167.6,281.8,139.7,250,187.4z"></path>
+          </svg>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-between align-items-center rounded-3 mx-2 border user_following">
+        <div class="icon ms-3">
+          <img class="border" src="../img/ロゴ.png" alt="">
+        </div>
+        <div class="col-8 text-start my-3">
+          <div class="container d-flex flex-column">
+            <div class="row fw-bold">
+              <p class="mb-0">ユーザネーム</p>
+              <p class="text-black-50">sample@example.com</p>
+            </div>
+            <div class="row">
+              <p>
+                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm text-center favorite_icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+            <path fill="#E2264D" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+          </svg>
+          <!-- <svg class="likeButton clicked" width="150px" height="150px" viewBox="0 0 500 500">
+            <circle class="explosion" r="150" cx="250" cy="250"></circle>
+            <g class="particleLayer">
+              <circle fill="#8CE8C3" cx="130" cy="126.5" r="12.5"></circle>
+              <circle fill="#8CE8C3" cx="411" cy="313.5" r="12.5"></circle>
+              <circle fill="#91D2FA" cx="279" cy="86.5" r="12.5"></circle>
+              <circle fill="#91D2FA" cx="155" cy="390.5" r="12.5"></circle>
+              <circle fill="#CC8EF5" cx="89" cy="292.5" r="10.5"></circle>
+              <circle fill="#9BDFBA" cx="414" cy="282.5" r="10.5"></circle>
+              <circle fill="#9BDFBA" cx="115" cy="149.5" r="10.5"></circle>
+              <circle fill="#9FC7FA" cx="250" cy="80.5" r="10.5"></circle>
+              <circle fill="#9FC7FA" cx="78" cy="261.5" r="10.5"></circle>
+              <circle fill="#96D8E9" cx="182" cy="402.5" r="10.5"></circle>
+              <circle fill="#CC8EF5" cx="401.5" cy="166" r="13"></circle>
+              <circle fill="#DB92D0" cx="379" cy="141.5" r="10.5"></circle>
+              <circle fill="#DB92D0" cx="327" cy="397.5" r="10.5"></circle>
+              <circle fill="#DD99B8" cx="296" cy="392.5" r="10.5"></circle>
+            </g>
+            <path class="heart" d="M250,187.4c-31.8-47.8-95.5-19.8-95.5,32.2c0,35.2,31.8,60.3,55.7,79.2c24.9,19.7,31.8,23.9,39.8,31.8 c7.9-7.9,14.6-12.6,39.8-31.8c24.3-18.5,55.7-44.4,55.7-79.6C345.5,167.6,281.8,139.7,250,187.4z"></path>
+          </svg> -->
+        </div>
+      </div>
+      <div class="row d-flex justify-content-between align-items-center rounded-3 mx-2 border user_following">
+        <div class="icon ms-3">
+          <img class="border" src="../img/ロゴ.png" alt="">
+        </div>
+        <div class="col-8 text-start my-3">
+          <div class="container d-flex flex-column">
+            <div class="row fw-bold">
+              <p class="mb-0">ユーザネーム</p>
+              <p class="text-black-50">sample@example.com</p>
+            </div>
+            <div class="row">
+              <p>
+                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm text-center favorite_icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+            <path fill="#E2264D" fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+          </svg>
+          <!-- <svg class="likeButton clicked" width="150px" height="150px" viewBox="0 0 500 500">
+            <circle class="explosion" r="150" cx="250" cy="250"></circle>
+            <g class="particleLayer">
+              <circle fill="#8CE8C3" cx="130" cy="126.5" r="12.5"></circle>
+              <circle fill="#8CE8C3" cx="411" cy="313.5" r="12.5"></circle>
+              <circle fill="#91D2FA" cx="279" cy="86.5" r="12.5"></circle>
+              <circle fill="#91D2FA" cx="155" cy="390.5" r="12.5"></circle>
+              <circle fill="#CC8EF5" cx="89" cy="292.5" r="10.5"></circle>
+              <circle fill="#9BDFBA" cx="414" cy="282.5" r="10.5"></circle>
+              <circle fill="#9BDFBA" cx="115" cy="149.5" r="10.5"></circle>
+              <circle fill="#9FC7FA" cx="250" cy="80.5" r="10.5"></circle>
+              <circle fill="#9FC7FA" cx="78" cy="261.5" r="10.5"></circle>
+              <circle fill="#96D8E9" cx="182" cy="402.5" r="10.5"></circle>
+              <circle fill="#CC8EF5" cx="401.5" cy="166" r="13"></circle>
+              <circle fill="#DB92D0" cx="379" cy="141.5" r="10.5"></circle>
+              <circle fill="#DB92D0" cx="327" cy="397.5" r="10.5"></circle>
+              <circle fill="#DD99B8" cx="296" cy="392.5" r="10.5"></circle>
+            </g>
+            <path class="heart" d="M250,187.4c-31.8-47.8-95.5-19.8-95.5,32.2c0,35.2,31.8,60.3,55.7,79.2c24.9,19.7,31.8,23.9,39.8,31.8 c7.9-7.9,14.6-12.6,39.8-31.8c24.3-18.5,55.7-44.4,55.7-79.6C345.5,167.6,281.8,139.7,250,187.4z"></path>
+          </svg> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../js/app.js"></script>
+</body>
+</html>

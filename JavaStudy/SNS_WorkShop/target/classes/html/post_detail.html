@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/follow.css">
+  <title>InstaGran</title>
+</head>
+<body class="bg-light">
+  <!-- ナビゲーションバー -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">InstaGran</a>
+      <div class="justify-content-end d-flex align-items-center col-4" id="user_icon">
+        <a href="/" class="col-3 mx-3 text-center text-dark">
+          <span>name</span>
+        </a>
+        <a href="/" class="nav_user_icon">
+          <img class="border rounded-circle" src="../img/rogo2.png" alt="">
+        </a>
+      </div>
+    </div>
+  </nav>
+  <div class="container d-flex justify-content-evenly flex-rows py-5">
+    <div class="row col-7">
+      <div class="container my-3 px-0 post_article">
+        <div class="d-flex justify-content-start align-items-center border border-bottom-0 p-2 bg-white" id="user_icon_top_1">
+          <a href="/" class="nav_user_icon">
+            <img class="border rounded-circle" src="../img/rogo2.png" alt="">
+          </a>
+          <a href="/" class="col-6 mx-3 text-left text-dark">
+            <span>name</span>
+          </a>
+        </div>
+        <div class="border border-bottom-0 bg-white">
+          <img class="w-100" src="../img/htmlcssjs-sum.png" alt="">
+        </div>
+        <div class="border bg-white">
+          <div class="p-3">
+            <p>ここにテキストが入ります。</p>
+            <p class="mb-0">2021/10/25</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row d-flex flex-column col-4">
+      <div class="my-3 px-0 pt-3 bg-white text-center border">
+        <form action="">
+          <textarea class="rounded-3 border" style="resize:none;" name="" id="" cols="38" rows="4" placeholder="コメント入力"></textarea>
+          <div class="d-flex flex-rows justify-content-around py-3">
+            <button type="submit" class="w-25 btn btn-primary">コメント</button>
+          </div>
+        </form>
+      </div>
+      <div class="my-3 py-3 bg-white text-center border">
+        <div class="text-start">
+          <p class="mb-0 py-2">コメント一覧</p>
+        </div>
+        <div class="users_comment">
+          <div class="users_comment__detail">
+            <div class="d-flex justify-content-start align-items-center py-2" id="user_icon_post_1">
+              <a href="/" class="nav_user_icon">
+                <img class="border rounded-circle" src="../img/rogo2.png" alt="">
+              </a>
+              <a href="/" class="col-3 mx-3 text-start text-dark">
+                <span>name</span>
+              </a>
+            </div>
+            <p class="border rounded-3 py-2">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+          </div>
+          <div class="users_comment__detail">
+            <div class="d-flex justify-content-start align-items-center py-2" id="user_icon_post_2">
+              <a href="/" class="nav_user_icon">
+                <img class="border rounded-circle" src="../img/rogo2.png" alt="">
+              </a>
+              <a href="/" class="col-3 mx-3 text-start text-dark">
+                <span>name</span>
+              </a>
+            </div>
+            <p class="border rounded-3 py-2">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+          </div>
+          <div class="users_comment__detail">
+            <div class="d-flex justify-content-start align-items-center py-2" id="user_icon_post_3">
+              <a href="/" class="nav_user_icon">
+                <img class="border rounded-circle" src="../img/rogo2.png" alt="">
+              </a>
+              <a href="/" class="col-3 mx-3 text-start text-dark">
+                <span>name</span>
+              </a>
+            </div>
+            <p class="border rounded-3 py-2">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- フッター -->
+  <footer class="container-xl mt-5 text-center">
+    <p language="en" translate="no">y-i-group.inc</p>
+  </footer>
+</body>
+</html>
